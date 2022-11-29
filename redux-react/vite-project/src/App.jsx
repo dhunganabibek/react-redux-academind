@@ -14,11 +14,16 @@ function App() {
   const decrementHandler = () => {
     dispatch({type:'decrement'});
   }
+
+  const increase5Handler = () => {
+    dispatch({type:'increment5', payload: 5});
+  }
   
   return (
     <div>
       <h1>Counter: {counter}</h1>
       <button onClick={incrementHandler}>Add</button>
+      <button onClick={increase5Handler}>AddBy5</button>
       <button onClick={decrementHandler}>subtract</button>
     </div>
   )
